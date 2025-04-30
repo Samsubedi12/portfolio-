@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samrat Subedi - Portfolio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="me.png">
+    <!-- External CSS and font links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/1c227c9bf2.js" crossorigin="anonymous"></script> 
+    
+    <!-- JavaScript for typing effect animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = "Front-End Web Developer";
+            const typingEffect = document.querySelector('.typing-effect');
+            let index = 0;
+        
+            function typeText() {
+                if (index < text.length) {
+                    typingEffect.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeText, 100);
+                }
+            }
+        
+            typeText();
+        });
+    </script>
+</head>
+<body id="home">
+    <!-- Navigation Bar Section -->
+    <div class="container-1">
+        <div class="navbar">
+            <h3><a href="index.html">Samrat Subedi</a></h3>
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="passion.html">passion</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li class="bar"><a href=""><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+   
+    <!-- Banner Section with Introduction -->
+    <div class="container-2" >
+        <div class="banner">
+            <div class="content">
+                <div class="front-end">
+                    <h1>Front-End WebDeveloper </h1>
+                </div>
+                <p>Hi. I'm Samrat Subedi. A passionate Front-end Web Developer based in Campsie, Sydney.</p>
+                <div class="passion">
+                    <h2>passion</h2>
+                    <p>As a beginner photographer with a passion for capturing moments that tell a story.
+                         My journey into photography started with a simple curiosity about the way light, colours,
+                          and perspectives shape our world. Over time, this curiosity grew into a creative pursuit, 
+                          inspiring me to explore different styles and techniques.  I love experimenting with natural
+                           light, composition, and candid moments to create images that feel authentic and meaningful.
+                            Whether it's landscapes, portraits, or everyday life, my goal is to capture emotions and 
+                            details that often go unnoticed. As I continue to learn and refine my skills, I look
+                             forward to sharing my work and connecting with others who appreciate the beauty of 
+                             photography. Feel free to explore my portfolio, and let's capture the world together—
+                            one frame at a time!.You can check my <a href="passion.html"> <strong><b>Passion</b></strong></a> from here.</p>
+                </div>
+                
+                <!-- Social Media Links -->
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/samrat-subedi-766a77232/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <!-- Profile Photo -->
+            <div class="photo">
+                <img src="me.png" alt="">
+            </div>
+        </div>
+        <!-- Tech Stack Section -->
+        <div class="techstack">
+            <h3>Tech Stack</h3>
+            <div class="line"></div>
+            <div class="logo">
+                <i class="fa-brands fa-html5" style="color: orangered;"></i>
+                <i class="fa-brands fa-css3-alt" style="color: rgb(19, 182, 236);"></i>
+                <i class="fa-brands fa-square-js" style="color: rgb(191, 191, 46);"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="container-sec" id="about">
+        <div class="about" >
+            <div class="about-img">
+                <img src="img/desktop.webp" alt="">
+            </div>
+            <div class="about-content">
+                <h2>about me</h2>
+                <h3>A dedicated Front-end Developer</h3>
+                <p>I'm a Frontend Web Developer building the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects section.</p>
+                <p>I possess an impressive arsenal of skills in HTML, CSS, JavaScript.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills & Learning Journey</h2>
+            <div class="skills-content">
+                <!-- Skill Cards -->
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <p>Building the structure of web pages.  Proficient in creating semantic and accessible HTML.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    <p>Styling web pages for visual appeal and responsiveness.  Learning modern CSS techniques.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Adding interactivity and dynamic behavior to websites. Currently expanding my knowledge.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Problem Solving</h3>
+                    <p>Developing strong analytical and problem-solving skills for efficient coding.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Communication</h3>
+                    <p>Improving communication skills for effective collaboration in development teams.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Adaptability</h3>
+                    <p>Highly adaptable and eager to learn new technologies and frameworks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="container-4" id="contact">
+        <div class="getinTouch">
+            <h2>CONTACT</h2>
+            <div class="contact-c">
+                <div class="mail">
+                    <h3>Get In Touch</h3>
+                    <div class="icon">
+                        <div class="gmail-icon"><a href="mailto:Subedisamrat30@gmail.com"><i class="fa-regular fa-envelope"></i></a></i></div>
+                        <a href="mailto: Subedisamrat30@gmail.com">Subedisamrat30@gmail.com</a>
+                    </div>
+                </div>
+                <div class="social">
+                    <h3>Social</h3>
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/samrat-subedi-766a77232/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Samsubedi12"><i  class="fa-brands fa-github"></i></a>
+                        <a href="tel:0424735851"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p class="copy"><i class="fa-solid fa-copyright"></i>Copyright 2025. Made by Samrat subedi</p>
+    </footer>
+</body>
+</html> 

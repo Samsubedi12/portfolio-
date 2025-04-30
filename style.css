@@ -1,0 +1,566 @@
+/* Global Styles */
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Link hover effect */
+a:hover{
+    color: rgb(35, 35, 201);
+}
+
+/* Smooth scrolling behavior */
+html{
+    scroll-behavior: smooth;
+}
+
+/* Sticky Navigation Container */
+.container-1{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+/* Navigation Bar Styles */
+.navbar{
+    width: 90%;
+    margin: auto;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Name/Logo gradient effect */
+.navbar h3{
+    background: linear-gradient(45deg, #2196F3, #3F51B5);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease;
+    text-transform: capitalize;
+}
+
+/* Name/Logo hover effect */
+.navbar h3:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Links Layout */
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+/* Navigation Link Styles */
+nav ul li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Navigation Link Underline Animation */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #2196F3;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover{
+    color: rgb(35, 35, 201);
+}
+
+/* Mobile Menu Button */
+.bar{
+    display: none;
+}
+
+/* Banner Section Styles */
+.banner{
+    width: 70%;
+    min-height: 70vh;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Front-End Title Gradient Effect */
+.front-end h1{
+    font-size: 3rem;
+    background: linear-gradient(45deg, #2196F3, #3F51B5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 1s ease;
+}
+
+/* Content Layout */
+.content{
+    flex: 1;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.content p{
+    width: 80%;
+}
+
+/* Social Media Icons */
+.social-media i{
+    font-size: 2rem;
+}
+
+.social-media i:hover{
+    color: blue;
+}
+
+.fa-brands{
+    padding-right: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Tech Stack Section */
+.techstack{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 11vh;
+}
+
+/* Tech Stack Divider Line */
+.line{
+    width: 100px;
+    border: 1px solid black;
+}
+
+/* Tech Stack Icons */
+.logo i{
+    font-size: 4rem;
+    transition: transform 0.3s ease;
+}
+
+.logo i:hover {
+    transform: translateY(-10px);
+}
+
+/* About Section */
+.about{
+    width: 70%;
+    margin: auto;
+    min-height: 60vh;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Profile Photo Styles */
+.photo {
+    flex: 1;
+    order: 2;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(210, 22, 22, 0.2);
+    transition: transform 0.7s ease, box-shadow 0.2s ease;
+}
+
+.photo img:hover {
+    transform: scale(1.9) rotate(25deg);
+    box-shadow: 0 8px 25px rgba(208, 8, 8, 0.3);
+}
+
+/* About Content Layout */
+.about-content{
+    flex-basis: 50%;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-content h2{
+    text-transform: uppercase;
+    color: rgb(35, 35, 201);
+}
+
+/* Contact Section */
+.container-4{
+    width: 70%;
+    margin: auto;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact-c{
+    width: 100%;
+    display: flex;
+    text-align: left;
+    gap: 50px;
+}
+
+.contact-c h3{
+    padding-bottom: 20px;
+}
+
+.getinTouch{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.getinTouch h2{
+    color: rgb(35, 35, 201);
+}
+
+/* Contact Icons */
+.icon{
+    display: flex;
+    align-items: center;
+}
+
+.icon a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon a:hover, .icon a i:hover{
+    color: rgb(35, 35, 201);
+}
+
+.gmail-icon{
+    background-color:#f9f9f9;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gmail-icon i{
+    font-size: 2rem;
+}
+
+/* Phone Icon Hover Effect */
+.fas fa .phone-icon:hover {
+    color: black;
+    filter: grayscale(100%);
+}
+
+/* Footer Styles */
+footer{
+    background-color: white;
+}
+
+footer .copy{
+    text-align: center;
+    padding: 30px 0px;
+    background-color: #f4f5ff;
+}
+
+/* Social Media Section */
+.social{
+    justify-content: flex-start;
+}
+
+.social .social-media i:hover{
+    color: blue;
+}
+
+.icon {
+    font-size: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Responsive Design - Mobile Devices */
+@media (max-width: 576px) {
+    /* Hide navigation links on mobile */
+    nav ul li{
+        display: none;
+    }
+    .bar{
+        display: block;
+    }
+    
+    /* Adjust banner layout for mobile */
+    .container-2{
+        padding-bottom: 20px;
+    }
+    .banner {
+        flex-direction: column-reverse;
+        width: 90%;
+        margin: auto;
+    }
+    
+    .dev{
+        text-align: center;
+    }
+    
+    /* Adjust photo size for mobile */
+    .photo img{
+        width: 250px;
+        height: 250px;
+    }
+    
+    /* Adjust content width for mobile */
+    .banner{
+        width: 90%;
+        margin: auto;
+    }
+    .content{
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Adjust tech stack layout for mobile */
+    .techstack{
+        flex-direction: column;
+        margin-top: 10%;
+    }
+    
+    /* Adjust about section for mobile */
+    .about{
+        padding-top:30px;
+        padding-bottom: 30px;
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+    }
+    
+    /* Adjust contact section for mobile */
+    .container-4{
+        width: 90%;
+    }
+    .getinTouch a{
+        font-size: 12px;
+    }
+    .container-4{
+        justify-content: center;
+    }
+    .getinTouch{
+        text-align: center;
+    }
+    .contact-c{
+        flex-direction: column;
+    }
+    .copy{
+        font-size: 10px;
+    }
+}
+
+/* Responsive Design - Tablets */
+@media (max-width: 768px) {
+    /* Similar mobile adjustments for tablets */
+    nav ul li{
+        display: none;
+    }
+    .bar{
+        display: block;
+    }
+    .container-2{
+        padding-bottom: 20px;
+    }
+    .banner {
+        flex-direction: column-reverse;
+        width: 90%;
+        gap: 2rem;
+        padding: 1rem;
+    }
+    
+    .dev{
+        text-align: center;
+    }
+    .photo img{
+        width: 250px;
+        height: 250px;
+    }
+    .banner{
+        width: 90%;
+        margin: auto;
+    }
+    .content{
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+    .front-end img{
+        width: 50px;
+        height: 20px;
+    }
+    .content p{
+        width: 100%;
+        margin: auto;
+    }
+    .techstack{
+        flex-direction: column;
+        margin-top: 10%;
+    }
+    .about{
+        padding-top:30px;
+        padding-bottom: 30px;
+        width: 90%;
+        margin: auto;
+        flex-direction: column;
+    }
+    .about-img img{
+        border-radius: 20px;
+    }
+    .about-content h3, h2{
+        text-align: center;
+    }
+    .container-4{
+        width: 90%;
+    }
+    .getinTouch a{
+        font-size: 12px;
+    }
+    .container-4{
+        justify-content: center;
+    }
+    .getinTouch{
+        text-align: center;
+    }
+    .last{
+        display: none;
+    }
+    .copy{
+        font-size: 10px;
+    }
+}
+
+/* Responsive Design - Large Desktops */
+@media (min-width: 992px) { 
+    .banner, .techstack, .about, .project, .container-4{
+        width: 90%;
+    }
+}
+
+/* Responsive Design - Extra Large Desktops */
+@media (min-width: 1200px) { 
+    .banner, .techstack, .about, .project, .container-4{
+        width: 70%;
+    }
+    .photo img{
+        margin-top: 60px;
+    }
+}
+
+/* Skills Section Styles */
+.skills {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.skill-card {
+    background-color: #fff;
+    border-left: 4px solid #2196F3;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(45deg, #f5f7fa, #ffffff);
+}
+
+.skill-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typing Effect Styles */
+.front-end{
+    position: relative;
+    display: inline-block;
+}
+
+.front-end::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Dark Mode Background */
+.body {
+    background-color: #222;
+}

@@ -1,0 +1,703 @@
+/* styles.css */
+
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Layout Styles */
+.container-1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2 {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #217dbb;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.navbar h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #34495e;
+}
+
+nav ul li a:hover {
+    color: #2c3e50;
+}
+
+.bar i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Intro Section */
+.intro-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.intro-section h1 {
+    color: #2196F3;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.intro-section p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Gallery Container */
+.gallery-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Slide Styles */
+.slide {
+    display: none;
+    width: 100%;
+    position:centre;
+    margin: 0 auto;
+}
+
+.slide img, .slide video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Caption Container */
+.caption-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+.caption {
+    margin-bottom: 10px;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #2196F3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    padding: 1px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Dot Navigation */
+.dot-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #2196F3;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.philosophy-section h2 {
+    color: #2196F3;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.philosophy-item {
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.philosophy-item:hover {
+    transform: translateY(-10px);
+}
+
+.philosophy-item i {
+    font-size: 2.5rem;
+    color: #2196F3;
+    margin-bottom: 20px;
+}
+
+.philosophy-item h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.philosophy-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+.skills-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.skills-section h2 {
+    color: #2196F3;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.skill-card ul {
+    list-style-type: none;
+}
+
+.skill-card li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.skill-bar {
+    margin-top: 20px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    float: right;
+    color: #2196F3;
+    font-weight: bold;
+}
+
+/* Categories Section */
+.categories-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.categories-section h2 {
+    color: #2196F3;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.category-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: translateY(-10px);
+}
+
+.category-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-item h3 {
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+.category-item p {
+    color: #666;
+    padding: 0 20px 20px;
+    margin: 0;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.testimonials-section h2 {
+    color: #dae2e8;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+.testimonial {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+}
+
+.testimonial p {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial .author {
+    color: #8dc4f0;
+    font-weight: bold;
+}
+
+/* Contact Form Section */
+.contact-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.contact-section h2 {
+    color: #2196F3;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+#contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-section,
+    .gallery-container,
+    .philosophy-section,
+    .skills-section,
+    .categories-section,
+    .testimonials-section,
+    .contact-section {
+        padding: 15px;
+        margin: 30px auto;
+    }
+
+    .philosophy-content,
+    .skills-grid,
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-slider {
+        flex-direction: column;
+    }
+
+    .testimonial {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section h1,
+    .philosophy-section h2,
+    .skills-section h2,
+    .categories-section h2,
+    .testimonials-section h2,
+    .contact-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .prev, .next {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/* Loading Animation Styles */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 3s ease;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Photography Philosophy Section */
+.philosophy-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.philosophy-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.philosophy-item {
+    flex-basis: 30%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.philosophy-item:hover {
+    transform: translateY(-10px);
+}
+
+.philosophy-item i {
+    font-size: 3rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    flex-basis: 48%;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.skill-bar .skill {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.skill-bar .skill span {
+    position: absolute;
+    right: 0;
+}
+
+/* Photography Categories */
+.categories-section {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-item {
+    flex-basis: 30%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+}
+
+.category-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #3498db;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonial-slider {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.testimonial .author {
+    display: block;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .philosophy-content,
+    .skills-grid,
+    .category-grid {
+        flex-direction: column;
+    }
+
+    .philosophy-item,
+    .skill-card,
+    .category-item {
+        margin-bottom: 20px;
+    }
+}   

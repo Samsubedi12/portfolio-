@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Passion - Samrat Subedi</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="me.png">
+    <!-- External CSS and font links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="passion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/1c227c9bf2.js" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <!-- Slideshow JavaScript -->
+    <script>
+    let slideIndex = 1;
+    let slideInterval;
+    let videoPlaying = false; // Track if video is playing
+
+    // Function to display slides
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        // Hide all slides
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        // Remove active class from dots
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        // Show current slide
+        slides[slideIndex - 1].style.display = "block";
+
+        // Add active class to corresponding dot
+        if (dots.length > 0) {
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // Play video if present in the current slide
+        const video = slides[slideIndex - 1].querySelector('video');
+        if (video) {
+            video.play();
+            videoPlaying = true;
+            video.addEventListener('ended', () => {
+                videoPlaying = false;
+            });
+        } else {
+            // Pause any video that might be playing
+            const allVideos = document.querySelectorAll("video");
+            allVideos.forEach((v) => {
+                v.pause();
+            });
+            videoPlaying = false;
+        }
+    }
+
+    // Function to change slides
+    function changeSlide(n) {
+        clearInterval(slideInterval);
+        showSlides((slideIndex += n));
+        startAutoSlide();
+    }
+
+    // Function to show current slide
+    function currentSlide(n) {
+        clearInterval(slideInterval);
+        showSlides((slideIndex = n));
+        startAutoSlide();
+    }
+
+    // Function to start automatic slideshow
+    function startAutoSlide() {
+        slideInterval = setInterval(() => {
+            if (!videoPlaying) {
+                slideIndex++;
+                showSlides(slideIndex);
+            }
+        }, 3000);
+    }
+
+    // Function to create navigation dots
+    function createDots() {
+        const slides = document.getElementsByClassName("slide");
+        const dotContainer = document.querySelector(".dot-container");
+
+        for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement("span");
+            dot.className = "dot";
+            dot.onclick = function () {
+                currentSlide(i + 1);
+            };
+            dotContainer.appendChild(dot);
+        }
+    }
+
+    // Initialize slideshow when DOM is loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        createDots();
+        showSlides(slideIndex);
+        startAutoSlide();
+    });
+    </script>
+
+    <!-- Navigation Bar -->
+    <div class="container-1">
+        <div class="navbar">
+            <h3><a href="index.html">Samrat Subedi</a></h3>
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="passion.html">passion</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li class="bar"><a href=""><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <div class="intro-section">
+        <h1>Photography - Capturing Life's Moments</h1>
+        <p>As an IT student navigating through the complexities of technology and coding, photography serves as my creative escape. It allows me to pause, observe, and capture the beauty in everyday moments. Through my lens, I share my perspective of the world, finding balance between the technical and artistic aspects of life.</p>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery-container">
+        <div class="slideshow-container">
+            <!-- Image Slides -->
+            <div class="slide fade">
+                <img src="me.png" alt="me">
+                <div class="caption-container">
+                    <p class="caption">An IT graduate following his photography passion</p>
+                    <a href="me.png" download class="download-btn">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </div>
+
+            <div class="slide fade">
+                <img src="image/img1.jpg" alt="img1">
+                <div class="caption-container">
+                    <p class="caption">Bungee Jump from world 2nd highest point</p>
+                    <a href="image/img1.jpg" download class="download-btn">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </div>
+            <div class="slide fade">
+                <img src="image/img2.jpg" alt="img2">
+                <div class="caption-container">
+                    <p class="caption">Bungee Jump from wolrd 2nd higesht point</p>
+                    <a href="image/img2.jpg" download class="download-btn">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </div>
+           
+            
+
+            <!-- Video Slide -->
+            <div class="slide fade">
+                <video autoplay muted loop>
+                    <source src="image/vid1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="caption-container">
+                    <p class="caption">Long Jetty</p>
+                    <a href="image/vid1.mp4" download class="download-btn">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </div>
+            <div class="slide fade">
+                <video autoplay muted loop>
+                    <source src="image/vid2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="caption-container">
+                    <p class="caption">werry Beach</p>
+                    <a href="image/vid2.mp4" download class="download-btn">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <a class="prev" onclick="changeSlide(-1)">❮</a>
+            <a class="next" onclick="changeSlide(1)">❯</a>
+        </div>
+
+        <!-- Dots/bullets/indicators -->
+        <div class="dot-container">
+            <!-- Will be populated by JavaScript -->
+        </div>
+    </div>
+    <div class="philosophy-section">
+        <h2>My Photographic Approach</h2>
+        <div class="philosophy-content">
+            <div class="philosophy-item">
+                <i class="fas fa-eye"></i>
+                <h3>Perspective</h3>
+                <p>I believe every image tells a unique story. My lens seeks out the narratives hidden in everyday scenes, transforming mundane moments into extraordinary memories.</p>
+            </div>
+            <!-- philosophy-->
+            <div class="philosophy-item">
+                <i class="fas fa-palette"></i>
+                <h3>Aesthetic</h3>
+                <p>Inspired by minimalist design and vibrant urban landscapes, my photography blends technical precision with emotional depth, creating images that resonate with viewers.</p>
+            </div>
+            <div class="philosophy-item">
+                <i class="fas fa-camera"></i>
+                <h3>Technique</h3>
+                <p>Combining my technical background in IT with photographic skills, I approach each shot as a problem to be solved—analyzing light, composition, and emotion with calculated creativity.</p>
+            </div>
+        </div>
+    </div>
+    <!-- skill and equipment -->
+    <div class="skills-section">
+        <h2>Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Camera Gear</h3>
+                <ul>
+                    <li>Primary Camera: sony a6000</li>
+                    <li>Lenses: 
+                        <ul>
+                            <li>Wide-angle Lens</li>
+                            <li>Portrait Lens</li>
+                            <li>Macro Lens</li>
+                        </ul>
+                    </li>
+                    <li>Editing Software: Adobe Lightroom, Photoshop</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Photography Skills</h3>
+                <div class="skill-bar">
+                    <div class="skill">Landscape Photography <span>85%</span></div>
+                    <div class="skill">Portrait Photography <span>75%</span></div>
+                    <div class="skill">Street Photography <span>65%</span></div>
+                    <div class="skill">Post-Processing <span>80%</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Categories-->
+    <div class="categories-section">
+        <h2>Photography Genres</h2>
+        <div class="category-grid">
+            <div class="category-item">
+                <img src="landscape.jpg" alt="Landscape Photography">
+                <h3>Landscape</h3>
+                <p>Capturing the breathtaking beauty of natural landscapes, from serene mountains to dynamic cityscapes.</p>
+            </div>
+            <div class="category-item">
+                <img src="image/portrait.jpg" alt="Portrait Photography">
+                <h3>Portrait</h3>
+                <p>Exploring human emotions and stories through carefully composed and lit portraits.</p>
+            </div>
+            <div class="category-item">
+                <img src="street.jpg" alt="Street Photography">
+                <h3>Street</h3>
+                <p>Documenting candid moments of urban life, revealing the poetry of everyday interactions.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!--Testimonials-->
+    <div class="testimonials-section">
+        <h2>What Others Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"Samrat's photographs capture not just images, but emotions. Each shot tells a profound story."</p>
+                <span class="author">- Alex Johnson</span>
+            </div>
+            <div class="testimonial">
+                <p>"The technical precision combined with creative vision is remarkable. A true artist behind the lens."</p>
+                <span class="author">- Sam Rodriguez, </span>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Form -->
+    <div class="contact-section">
+        <h2>Get in Touch</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <input type="text" id="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" required placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <textarea id="message" required placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        
+        
+        <p class="copy"><i class="fa-solid fa-copyright"></i>Copyright 2025. Made by Samrat subedi</p>
+    </footer>
+   
+</body>
+</html> 
