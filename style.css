@@ -19,7 +19,7 @@ html{
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: white;
+    background-color: rgb(225, 214, 242);
 }
 
 /* Navigation Bar Styles */
